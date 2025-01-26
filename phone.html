@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Details</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .buy-now,
+        .back-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff6600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .buy-now:hover {
+            background-color: #cc5500;
+        }
+
+        .back-btn {
+            background-color: #555;
+            margin-left: 10px;
+        }
+
+        .back-btn:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .buy-now,
+            .back-btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>APPLE IPHONE 12 PRO 128GB ROM SMART PHONE</h1>
+        <p>Click the Buy Now button to view product details for the Apple iPhone 12 Pro 128GB ROM smartphone.</p>
+
+        <!-- Displaying phone image -->
+        <img src="phone.jpg" alt="Phone Product">
+
+
+        <!-- Displaying phone video -->
+        <video id="phoneVideo" controls muted>
+            <source src="iphone12pro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <br>
+        <a class="buy-now" href="https://s.daraz.lk/s.6946?cc" target="_blank">Buy Now</a>
+        <a class="back-btn" href="index.html">Home</a>
+    </div>
+
+    <script>
+        const phoneVideo = document.getElementById('phoneVideo');
+
+        // Reset video and mute sound when it ends
+        phoneVideo.addEventListener('ended', function () {
+            phoneVideo.currentTime = 0;
+            phoneVideo.muted = true;
+        });
+    </script>
+</body>
+
+</html>
